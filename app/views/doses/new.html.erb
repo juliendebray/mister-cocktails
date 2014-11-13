@@ -1,0 +1,7 @@
+<h1>Doses#new</h1>
+
+<%= form_for([@cocktail, @dose]) do |f| %>
+  <%= f.select :ingredient_id, @ingredients %>
+  <%= f.text_field :amount %>
+  <%= f.submit %>
+<% end %>

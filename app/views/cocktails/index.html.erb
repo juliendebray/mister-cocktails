@@ -1,7 +1,7 @@
 <h1>Cocktails#index</h1>
 <ul>
 <% @cocktails.each do |c| %>
-  <li><%= c.name %>  - <%= link_to 'View details', cocktail_path(c) %></li>
+  <li> <%= image_tag c.picture.url(:thumb) %> <%= c.name %>  - <%= link_to 'View details', cocktail_path(c) %></li>
 <% end %>
 </ul>
 <p><%= link_to 'add cocktail', new_cocktail_path %></p>

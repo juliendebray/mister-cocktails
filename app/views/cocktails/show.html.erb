@@ -1,5 +1,6 @@
 <h1>Cocktails#show</h1>
 <p>Name: <%= @cocktail.name %></p>
+<p><%= image_tag @cocktail.picture.url(:medium) %></p>
   <ul>
     <% @cocktail.doses.each do |d| %>
       <li>

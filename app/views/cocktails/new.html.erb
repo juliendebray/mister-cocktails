@@ -1,7 +1,12 @@
 <h1>Cocktails#new</h1>
-<%= form_for(@cocktail) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
+<%= form_for(@cocktail, html: { multipart: true }) do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :picture %>
+    <%= f.file_field :picture %>
+  </p>
   <%= f.submit %>
 <% end %>
